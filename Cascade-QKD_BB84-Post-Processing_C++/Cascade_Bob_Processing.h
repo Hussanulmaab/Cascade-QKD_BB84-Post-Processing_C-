@@ -5,4 +5,4 @@
 #include "message_Struct.cpp"
 using namespace std;
 
-void Cascade_Bob_Processing(message_Struct message);
+message_Struct Cascade_Bob_Processing(message_Struct message);

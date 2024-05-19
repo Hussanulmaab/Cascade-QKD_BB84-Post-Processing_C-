@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cascade_Alice_Permute.cpp" />
+    <ClCompile Include="Cascade_Bob_Permute.cpp" />
     <ClCompile Include="Cascade_Bob_Processing.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Cascade_Alice.cpp" />
@@ -136,8 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cascade_Alice.h" />
+    <ClInclude Include="Cascade_Alice_Permute.h" />
     <ClInclude Include="Cascade_Alice_Processing.h" />
     <ClInclude Include="Cascade_Bob.h" />
+    <ClInclude Include="Cascade_Bob_Permute.h" />
     <ClInclude Include="Cascade_Bob_Processing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
