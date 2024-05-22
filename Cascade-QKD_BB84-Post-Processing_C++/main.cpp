@@ -3,14 +3,16 @@
 #include <vector>
 #include <string>
 #include <bitset>
+#include <Python.h>
+#include <Windows.h>
 #include "Cascade_Alice.h"
 #include "Cascade_Bob.h"
 #include "message_Struct.cpp"
 #include "Cascade_Bob_Processing.h"
 #include "Cascade_Alice_Permute.h"
 #include "Cascade_Bob_Permute.h"
-#include "Cascade_Alice_Toeplitz_Privacy_Amp.h"
-#include "Cascade_Bob_Toeplitz_Privacy_Amp.h"
+#include "Cascade_Alice_Privacy_Amp.h"
+#include "Cascade_Bob_Privacy_Amp.h"
 using namespace std;
  
 // Iteration Horizontal Pass Vertical
@@ -65,8 +67,10 @@ int main()
 
     //Privacy Amplification
     cout << "Privacy Amplification " << endl;
-    Cascade_Alice_Toeplitz_Privacy_Amp(sifted_Alice);
-    Cascade_Bob_Toeplitz_Privacy_Amp(corrected_Bob);
+
+    Cascade_Alice_Privacy_Amp();
+    cout << endl;
+    Cascade_Bob_Privacy_Amp();
 
     return 0;
 }

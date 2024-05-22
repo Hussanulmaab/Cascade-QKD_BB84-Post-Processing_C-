@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\hulma\AppData\Local\Programs\Python\Python312\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\hulma\AppData\Local\Programs\Python\Python312\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -124,14 +128,15 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>python312.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cascade_Alice_Permute.cpp" />
+    <ClCompile Include="Cascade_Alice_Privacy_Amp.cpp" />
     <ClCompile Include="Cascade_Bob_Permute.cpp" />
+    <ClCompile Include="Cascade_Bob_Privacy_Amp.cpp" />
     <ClCompile Include="Cascade_Bob_Processing.cpp" />
-    <ClCompile Include="Cascade_Alice_Toeplitz_Privacy_Amp.cpp" />
-    <ClCompile Include="Cascade_Bob_Toeplitz_Privacy_Amp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Cascade_Alice.cpp" />
     <ClCompile Include="Cascade_Alice_Processing.cpp" />
@@ -141,12 +146,12 @@
   <ItemGroup>
     <ClInclude Include="Cascade_Alice.h" />
     <ClInclude Include="Cascade_Alice_Permute.h" />
+    <ClInclude Include="Cascade_Alice_Privacy_Amp.h" />
     <ClInclude Include="Cascade_Alice_Processing.h" />
     <ClInclude Include="Cascade_Bob.h" />
     <ClInclude Include="Cascade_Bob_Permute.h" />
+    <ClInclude Include="Cascade_Bob_Privacy_Amp.h" />
     <ClInclude Include="Cascade_Bob_Processing.h" />
-    <ClInclude Include="Cascade_Alice_Toeplitz_Privacy_Amp.h" />
-    <ClInclude Include="Cascade_Bob_Toeplitz_Privacy_Amp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
