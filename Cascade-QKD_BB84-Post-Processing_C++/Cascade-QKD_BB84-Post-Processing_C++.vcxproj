@@ -130,6 +130,8 @@
     <ClCompile Include="Cascade_Alice_Permute.cpp" />
     <ClCompile Include="Cascade_Bob_Permute.cpp" />
     <ClCompile Include="Cascade_Bob_Processing.cpp" />
+    <ClCompile Include="Cascade_Alice_Toeplitz_Privacy_Amp.cpp" />
+    <ClCompile Include="Cascade_Bob_Toeplitz_Privacy_Amp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Cascade_Alice.cpp" />
     <ClCompile Include="Cascade_Alice_Processing.cpp" />
@@ -143,6 +145,8 @@
     <ClInclude Include="Cascade_Bob.h" />
     <ClInclude Include="Cascade_Bob_Permute.h" />
     <ClInclude Include="Cascade_Bob_Processing.h" />
+    <ClInclude Include="Cascade_Alice_Toeplitz_Privacy_Amp.h" />
+    <ClInclude Include="Cascade_Bob_Toeplitz_Privacy_Amp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

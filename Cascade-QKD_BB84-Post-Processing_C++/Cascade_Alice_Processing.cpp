@@ -24,20 +24,20 @@ void Cascade_Alice_Processing() {
 	int counter = 0;
 
 	int i,j,prevJ,k,l,m,n,parity = 0;
-	for (i = 4; i <= sifted_Alice.size(); /*i *= 2*/ i ) {
+	for (i = 8; i <= sifted_Alice.size(); i *= 2 /*i*/ ) {
 		
 		//temp check counter
 		counter += 1;
-		if (counter == 3) break;
+		if (counter == 100) break;
 
 		Alice_Received_Message.block_num_Vect.clear();
 		Alice_Received_Message.block_num_Parity_Vect.clear();
 
-		//to be removed later
-		if (i == 16) {
-			cout << "End" << endl;
-			break;
-		}
+		////to be removed later
+		//if (i == 32) {
+		//	cout << "End" << endl;
+		//	break;
+		//}
 
 		//to be removed later
 		if (i > 4) Cascade_Alice_Permute();

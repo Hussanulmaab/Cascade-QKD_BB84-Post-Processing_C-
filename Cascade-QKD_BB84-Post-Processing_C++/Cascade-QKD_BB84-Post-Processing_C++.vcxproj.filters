@@ -51,6 +51,12 @@
     <ClCompile Include="Cascade_Bob_Permute.cpp">
       <Filter>Source Files\Cascade_Bob</Filter>
     </ClCompile>
+    <ClCompile Include="Cascade_Alice_Toeplitz_Privacy_Amp.cpp">
+      <Filter>Source Files\Cascade_Alice</Filter>
+    </ClCompile>
+    <ClCompile Include="Cascade_Bob_Toeplitz_Privacy_Amp.cpp">
+      <Filter>Source Files\Cascade_Bob</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cascade_Alice.h">
@@ -69,6 +75,12 @@
       <Filter>Header Files\Cascade_Alice</Filter>
     </ClInclude>
     <ClInclude Include="Cascade_Bob_Permute.h">
+      <Filter>Header Files\Cascade_Bob</Filter>
+    </ClInclude>
+    <ClInclude Include="Cascade_Alice_Toeplitz_Privacy_Amp.h">
+      <Filter>Header Files\Cascade_Alice</Filter>
+    </ClInclude>
+    <ClInclude Include="Cascade_Bob_Toeplitz_Privacy_Amp.h">
       <Filter>Header Files\Cascade_Bob</Filter>
     </ClInclude>
   </ItemGroup>
