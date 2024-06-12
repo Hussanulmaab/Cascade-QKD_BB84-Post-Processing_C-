@@ -25,7 +25,7 @@ def Cryptomite_Priv_Amp():
         return dodis.extract(raw_key_bits, seed_bits)
 
     # Read the file and generate the input_bits list
-    with open('Alice_Error_Reconciliated.txt', 'r') as file:
+    with open('Transmitter_Error_Reconciliated.txt', 'r') as file:
         input_bits = [int(bit) for bit in file.read().strip()]
 
     n = len(input_bits)
@@ -40,10 +40,6 @@ def Cryptomite_Priv_Amp():
     with open('Seed.txt', 'w') as seed_file:
         seed_file.write(''.join(map(str, seed_bits)))
 
-    # Write final to "Alice_Final_Key.txt"
-    with open('Alice_Final_Key.txt', 'w') as final_key_file:
+    # Write final to "Transmitter_Final_Key.txt"
+    with open('Transmitter_Final_Key.txt', 'w') as final_key_file:
         final_key_file.write(''.join(map(str, final)))
-
-    print(input_bits)
-    print(seed_bits)
-    print(final)

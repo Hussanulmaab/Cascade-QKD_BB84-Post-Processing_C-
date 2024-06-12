@@ -132,26 +132,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cascade_Alice_Permute.cpp" />
-    <ClCompile Include="Cascade_Alice_Privacy_Amp.cpp" />
-    <ClCompile Include="Cascade_Bob_Permute.cpp" />
-    <ClCompile Include="Cascade_Bob_Privacy_Amp.cpp" />
-    <ClCompile Include="Cascade_Bob_Processing.cpp" />
+    <ClCompile Include="Cascade_Transmitter_Permute.cpp" />
+    <ClCompile Include="Cascade_Transmitter_Privacy_Amp.cpp" />
+    <ClCompile Include="Cascade_Receiver_Permute.cpp" />
+    <ClCompile Include="Cascade_Receiver_Privacy_Amp.cpp" />
+    <ClCompile Include="Cascade_Receiver_Processing.cpp" />
+    <ClCompile Include="Error_Check.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Cascade_Alice.cpp" />
-    <ClCompile Include="Cascade_Alice_Processing.cpp" />
-    <ClCompile Include="Cascade_Bob.cpp" />
+    <ClCompile Include="Cascade_Transmitter.cpp" />
+    <ClCompile Include="Cascade_Transmitter_Processing.cpp" />
+    <ClCompile Include="Cascade_Receiver.cpp" />
     <ClCompile Include="message_Struct.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cascade_Alice.h" />
-    <ClInclude Include="Cascade_Alice_Permute.h" />
-    <ClInclude Include="Cascade_Alice_Privacy_Amp.h" />
-    <ClInclude Include="Cascade_Alice_Processing.h" />
-    <ClInclude Include="Cascade_Bob.h" />
-    <ClInclude Include="Cascade_Bob_Permute.h" />
-    <ClInclude Include="Cascade_Bob_Privacy_Amp.h" />
-    <ClInclude Include="Cascade_Bob_Processing.h" />
+    <ClInclude Include="Cascade_Transmitter.h" />
+    <ClInclude Include="Cascade_Transmitter_Permute.h" />
+    <ClInclude Include="Cascade_Transmitter_Privacy_Amp.h" />
+    <ClInclude Include="Cascade_Transmitter_Processing.h" />
+    <ClInclude Include="Cascade_Receiver.h" />
+    <ClInclude Include="Cascade_Receiver_Permute.h" />
+    <ClInclude Include="Cascade_Receiver_Privacy_Amp.h" />
+    <ClInclude Include="Cascade_Receiver_Processing.h" />
+    <ClInclude Include="Error_Check.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

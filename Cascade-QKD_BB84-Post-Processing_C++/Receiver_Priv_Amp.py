@@ -24,7 +24,7 @@ def Cryptomite_Priv_Amp():
         return dodis.extract(raw_key_bits, seed_bits)
 
     # Read the file and generate the input_bits list
-    with open('Bob_Error_Reconciliated.txt', 'r') as file:
+    with open('Receiver_Error_Reconciliated.txt', 'r') as file:
         input_bits = [int(bit) for bit in file.read().strip()]
 
     # Read the seed bits from the Seed file
@@ -37,10 +37,6 @@ def Cryptomite_Priv_Amp():
     # Perform privacy amplification
     final = privacy_amplification(input_bits, seed_bits, n, m)
 
-    # Write final to "Bob_Final_Key.txt"
-    with open('Bob_Final_Key.txt', 'w') as final_key_file:
+    # Write final to "Receiver_Final_Key.txt"
+    with open('Receiver_Final_Key.txt', 'w') as final_key_file:
         final_key_file.write(''.join(map(str, final)))
-
-    print(input_bits)
-    print(seed_bits)
-    print(final)

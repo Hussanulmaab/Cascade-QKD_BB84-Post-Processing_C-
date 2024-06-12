@@ -2,4 +2,4 @@
 #include <iostream>
 #include <vector>
 
-void Cascade_Alice_Permute();
+void Cascade_Transmitter_Permute();

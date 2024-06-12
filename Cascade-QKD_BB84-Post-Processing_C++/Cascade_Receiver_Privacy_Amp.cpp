@@ -5,7 +5,7 @@
 #include <Windows.h>
 using namespace std;
 
-void Cascade_Bob_Privacy_Amp() {
+void Cascade_Receiver_Privacy_Amp() {
 
     // Initialize Python configuration
     PyStatus status;
@@ -52,7 +52,7 @@ void Cascade_Bob_Privacy_Amp() {
     PyObject* pArgs, * pValue;
 
     // Convert the file name to a Python string
-    pName = PyUnicode_DecodeFSDefault("Bob_Priv_Amp");
+    pName = PyUnicode_DecodeFSDefault("Receiver_Priv_Amp");
     if (pName == NULL) {
         PyErr_Print();
         throw runtime_error("Failed to convert file name to Python string");
@@ -88,7 +88,7 @@ void Cascade_Bob_Privacy_Amp() {
     }
     else {
         PyErr_Print();
-        throw runtime_error("Failed to load Bob_Priv_Amp");
+        throw runtime_error("Failed to load Receiver_Priv_Amp");
     }
 
     // Finalize the Python interpreter

@@ -3,6 +3,6 @@
 #include <vector>
 using namespace std;
 
-extern vector<int> sifted_Alice;
+extern vector<int> sifted_Transmitter;
 
-void Cascade_Alice();
+void Cascade_Transmitter();
