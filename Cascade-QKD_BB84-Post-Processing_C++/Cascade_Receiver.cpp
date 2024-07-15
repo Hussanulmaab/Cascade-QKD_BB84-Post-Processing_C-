@@ -13,51 +13,49 @@ vector<int> corrected_Receiver;
 void Cascade_Receiver() {
     int i;
 
-    //// -------------------------> Receiver Reading the text Bits file
-    //ifstream inputFile("Receiver_data.txt");
+    // -------------------------> Receiver Reading the text Bits file
+    ifstream inputFile("Receiver_data.txt");
 
-    //if (inputFile.is_open()) {
-    //    char digit;
-    //    while (inputFile >> digit) {
-    //        if (digit == '0' || digit == '1') {
-    //            sifted_Receiver.push_back(digit - '0'); // Convert char '0' or '1' to int 0 or 1
-    //        }
-    //        else {
-    //            cerr << "Invalid character found in file: " << digit << endl;
-    //            return; // Exit with error code
-    //        }
-    //    }
-    //    inputFile.close();
-    //}
-    //else {
-    //    cerr << "Unable to open file." << endl;
-    //    return; // Exit with error code
-    //}
-
-    //corrected_Receiver = sifted_Receiver;
-
-
-    //----------------------> Receiver Sifting bin file
-    std::ifstream file("receiver_sift.bin", std::ios::binary);
-
-    if (!file.is_open()) {
-        std::cerr << "Failed to open the file." << std::endl;
-    }
-
-    // Read the file byte by byte
-    unsigned char byte;
-    while (file.read(reinterpret_cast<char*>(&byte), sizeof(unsigned char))) {
-        // Convert the byte to a bitset and push each bit to sifted_Receiver
-        std::bitset<8> bits(byte);
-        for (int i = 7; i >= 0; --i) {
-            sifted_Receiver.push_back(bits[i]);
+    if (inputFile.is_open()) {
+        char digit;
+        while (inputFile >> digit) {
+            if (digit == '0' || digit == '1') {
+                sifted_Receiver.push_back(digit - '0'); // Convert char '0' or '1' to int 0 or 1
+            }
+            else {
+                cerr << "Invalid character found in file: " << digit << endl;
+            }
         }
+        inputFile.close();
     }
-
-    // Close the file
-    file.close();
+    else {
+        cerr << "Unable to open file." << endl;
+    }
 
     corrected_Receiver = sifted_Receiver;
+
+
+    ////----------------------> Receiver Sifting bin file
+    //std::ifstream file("receiver_sift.bin", std::ios::binary);
+
+    //if (!file.is_open()) {
+    //    std::cerr << "Failed to open the file." << std::endl;
+    //}
+
+    //// Read the file byte by byte
+    //unsigned char byte;
+    //while (file.read(reinterpret_cast<char*>(&byte), sizeof(unsigned char))) {
+    //    // Convert the byte to a bitset and push each bit to sifted_Receiver
+    //    std::bitset<8> bits(byte);
+    //    for (int i = 7; i >= 0; --i) {
+    //        sifted_Receiver.push_back(bits[i]);
+    //    }
+    //}
+
+    //// Close the file
+    //file.close();
+
+    //corrected_Receiver = sifted_Receiver;
 
 
     //// --------------->Receiver getting the Transmitter file to check error Percentage (QBER)

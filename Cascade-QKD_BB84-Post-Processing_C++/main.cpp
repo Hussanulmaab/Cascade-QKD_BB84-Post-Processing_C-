@@ -31,9 +31,21 @@ int main()
     //Privacy Amplification
     cout << "Privacy Amplification ...." << endl;
 
-    Cascade_Transmitter_Privacy_Amp();
-    cout << endl;
-    Cascade_Receiver_Privacy_Amp();
+    //Cascade_Transmitter_Privacy_Amp();
+    //cout << endl;
+    //Cascade_Receiver_Privacy_Amp();
+
+    //vector<int> vec = { 1, 2, 3, 4, 5 };
+
+    //vec.erase(vec.begin() + 1);
+    //vec.erase(vec.begin() + 1);
+    //vec.erase(vec.begin() + 1);
+    //vec.erase(vec.begin() + 1);
+    //
+
+    //for (int i = 0; i < vec.size(); ++i) {
+    //    std::cout << vec[i] << " ";
+    //}
 
     return 0;
 }

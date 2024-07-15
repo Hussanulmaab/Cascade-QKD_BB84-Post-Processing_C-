@@ -25,14 +25,14 @@ void Cascade_Transmitter_Processing() {
 	int counter = 0;
 
 	int i,j,prevJ,k,l,m,n,parity = 0;
-	for (i = 8; i <= sifted_Transmitter.size(); i *= 2 /*i*/ ) {
+	for (i = 4; i <= sifted_Transmitter.size(); i *= 2 /*i*/ ) {
 		
 		cout << "Round " << counter << endl;
 		Error_Check();
 
 		//temp check counter
 		counter += 1;
-		if (counter == 6) break;
+		if (counter == 5) break;
 
 		Transmitter_Received_Message.block_num_Vect.clear();
 		Transmitter_Received_Message.block_num_Parity_Vect.clear();
@@ -76,23 +76,23 @@ void Cascade_Transmitter_Processing() {
 			Transmitter_Send_Message.block_num_Vect.clear();
 			Transmitter_Send_Message.block_num_Parity_Vect.clear();
 
-			//cout << "--------------------------------Transmitter back " << endl;
+			cout << "--------------------------------Transmitter back " << endl;
 			for (int k = 0; k < Transmitter_Received_Message.block_num_Vect.size(); k++) {
-				//cout << "P" << j << "[" << Transmitter_Received_Message.block_num_Vect[k] << "]" << " ";
+				cout << "P" << j << "[" << Transmitter_Received_Message.block_num_Vect[k] << "]" << " ";
 
 				for (l = 0; l < Transmitter_Received_Message.Pass; l++) {
-					//cout << sifted_Transmitter[(Transmitter_Received_Message.Pass * Transmitter_Received_Message.block_num_Vect[k] + l)] << " ";
+					cout << sifted_Transmitter[(Transmitter_Received_Message.Pass * Transmitter_Received_Message.block_num_Vect[k] + l)] << " ";
 				}
 			}
 
-			//cout << endl;
+			cout << endl;
 			for (int k = 0; k < Transmitter_Received_Message.block_num_Vect.size(); k++) {
-				//cout << Transmitter_Received_Message.block_num_Parity_Vect[k] << " ";
+				cout << Transmitter_Received_Message.block_num_Parity_Vect[k] << " ";
 			}
 			prevJ = j;
-			//cout << endl;
+			cout << endl;
 		}
-		if (i == 8) i = 4;
-		//cout << endl;
+		//if (i == 8) i = 4;
+		cout << endl;
 	}
 }

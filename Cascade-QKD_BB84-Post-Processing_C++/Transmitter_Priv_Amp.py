@@ -5,20 +5,6 @@ def Cryptomite_Priv_Amp():
     from random import randint
 
     def privacy_amplification(raw_key_bits: list, seed_bits: list, n_1, m):
-        """ Perform privacy amplification for the QKD protocol.
-        Parameters
-        ----------
-        raw_key_bits : list of bits, derived from the measurement
-        outcomes (after sifting, error correction and parameter
-        estimation).
-        seed_bits : list of bits, generated independently.
-        n_1: integer, the length of the raw key bit string.
-        m: integer, the length of the output secret key bit string.
-        Returns
-        ---------
-        list of bits,
-        the extracted output (i.e. the shared secret key).
-        """
         # Initialise the Toeplitz extractor with the appropriate parameters:
         dodis = cryptomite.Dodis(n_1, m)
         # Perform Toeplitz extraction and return the output
