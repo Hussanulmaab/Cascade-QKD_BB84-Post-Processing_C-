@@ -3,9 +3,10 @@
 #include <fstream>
 #include <Python.h>
 #include <Windows.h>
+#include "Public_RA_Toeplitz.h"
 using namespace std;
 
-void Cascade_Transmitter_Privacy_Amp() {
+void Public_RA_Toeplitz() {
 
     // Initialize Python configuration
     PyStatus status;
@@ -52,7 +53,7 @@ void Cascade_Transmitter_Privacy_Amp() {
     PyObject* pArgs, * pValue;
 
     // Convert the file name to a Python string
-    pName = PyUnicode_DecodeFSDefault("Transmitter_Priv_Amp");
+    pName = PyUnicode_DecodeFSDefault("Public_RA_Toeplitz");
     if (pName == NULL) {
         PyErr_Print();
         throw runtime_error("Failed to convert file name to Python string");
@@ -64,31 +65,31 @@ void Cascade_Transmitter_Privacy_Amp() {
 
     if (pModule != NULL) {
         // Get the function from the module
-        pFunc = PyObject_GetAttrString(pModule, "Cryptomite_Priv_Amp");
+        pFunc = PyObject_GetAttrString(pModule, "RA_Toeplitz");
         if (pFunc && PyCallable_Check(pFunc)) {
             // Call the function without arguments
             pValue = PyObject_CallObject(pFunc, NULL);
-            if (pValue != NULL) {
+                if (pValue != NULL) {
                 Py_DECREF(pValue);
             }
             else {
                 Py_DECREF(pFunc);
                 Py_DECREF(pModule);
                 PyErr_Print();
-                throw runtime_error("Call to Cryptomite_Priv_Amp() failed");
+                throw runtime_error("Call to RA_Toeplitz() failed");
             }
         }
         else {
             if (PyErr_Occurred())
                 PyErr_Print();
-            throw runtime_error("Cannot find function Cryptomite_Priv_Amp");
+            throw runtime_error("Cannot find function RA_Toeplitz");
         }
         Py_XDECREF(pFunc);
         Py_DECREF(pModule);
     }
     else {
         PyErr_Print();
-        throw runtime_error("Failed to load Transmitter_Priv_Amp");
+        throw runtime_error("Failed to load Public_RA_Toeplitz");
     }
 
     // Finalize the Python interpreter

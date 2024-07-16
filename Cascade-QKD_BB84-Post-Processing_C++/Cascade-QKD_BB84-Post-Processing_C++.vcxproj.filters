@@ -45,19 +45,16 @@
     <ClCompile Include="Cascade_Receiver_Processing.cpp">
       <Filter>Source Files\Cascade_Receiver</Filter>
     </ClCompile>
-    <ClCompile Include="Cascade_Transmitter_Permute.cpp">
-      <Filter>Source Files\Cascade_Transmitter</Filter>
-    </ClCompile>
-    <ClCompile Include="Cascade_Receiver_Permute.cpp">
-      <Filter>Source Files\Cascade_Receiver</Filter>
-    </ClCompile>
-    <ClCompile Include="Cascade_Transmitter_Privacy_Amp.cpp">
-      <Filter>Source Files\Cascade_Transmitter</Filter>
-    </ClCompile>
-    <ClCompile Include="Cascade_Receiver_Privacy_Amp.cpp">
-      <Filter>Source Files\Cascade_Receiver</Filter>
-    </ClCompile>
     <ClCompile Include="Error_Check.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Permute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Public_RA_Toeplitz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Private_RA_Toeplitz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,19 +71,16 @@
     <ClInclude Include="Cascade_Receiver_Processing.h">
       <Filter>Header Files\Cascade_Receiver</Filter>
     </ClInclude>
-    <ClInclude Include="Cascade_Transmitter_Permute.h">
-      <Filter>Header Files\Cascade_Transmitter</Filter>
-    </ClInclude>
-    <ClInclude Include="Cascade_Receiver_Permute.h">
-      <Filter>Header Files\Cascade_Receiver</Filter>
-    </ClInclude>
-    <ClInclude Include="Cascade_Transmitter_Privacy_Amp.h">
-      <Filter>Header Files\Cascade_Transmitter</Filter>
-    </ClInclude>
-    <ClInclude Include="Cascade_Receiver_Privacy_Amp.h">
-      <Filter>Header Files\Cascade_Receiver</Filter>
-    </ClInclude>
     <ClInclude Include="Error_Check.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Permute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public_RA_Toeplitz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Private_RA_Toeplitz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

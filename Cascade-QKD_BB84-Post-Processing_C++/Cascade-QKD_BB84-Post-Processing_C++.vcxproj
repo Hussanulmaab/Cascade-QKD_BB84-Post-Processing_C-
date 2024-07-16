@@ -132,10 +132,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cascade_Transmitter_Permute.cpp" />
-    <ClCompile Include="Cascade_Transmitter_Privacy_Amp.cpp" />
-    <ClCompile Include="Cascade_Receiver_Permute.cpp" />
-    <ClCompile Include="Cascade_Receiver_Privacy_Amp.cpp" />
+    <ClCompile Include="Private_RA_Toeplitz.cpp" />
+    <ClCompile Include="Permute.cpp" />
+    <ClCompile Include="Public_RA_Toeplitz.cpp" />
     <ClCompile Include="Cascade_Receiver_Processing.cpp" />
     <ClCompile Include="Error_Check.cpp" />
     <ClCompile Include="main.cpp" />
@@ -146,12 +145,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cascade_Transmitter.h" />
-    <ClInclude Include="Cascade_Transmitter_Permute.h" />
-    <ClInclude Include="Cascade_Transmitter_Privacy_Amp.h" />
+    <ClInclude Include="Private_RA_Toeplitz.h" />
+    <ClInclude Include="Permute.h" />
+    <ClInclude Include="Public_RA_Toeplitz.h" />
     <ClInclude Include="Cascade_Transmitter_Processing.h" />
     <ClInclude Include="Cascade_Receiver.h" />
-    <ClInclude Include="Cascade_Receiver_Permute.h" />
-    <ClInclude Include="Cascade_Receiver_Privacy_Amp.h" />
     <ClInclude Include="Cascade_Receiver_Processing.h" />
     <ClInclude Include="Error_Check.h" />
   </ItemGroup>

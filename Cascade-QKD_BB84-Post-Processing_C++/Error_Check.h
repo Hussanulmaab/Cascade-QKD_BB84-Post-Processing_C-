@@ -2,4 +2,4 @@
 #include <vector>
 using namespace std;
 
-void Error_Check();
+double Error_Check(vector<int> Tran, vector<int> Rec);
