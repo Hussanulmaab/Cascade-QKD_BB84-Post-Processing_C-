@@ -10,6 +10,9 @@ def RA_Toeplitz():
     from math import floor, log2
     from collections import Counter
 
+    def binary_list_to_string(binary_list):
+        return ''.join(map(str, binary_list))
+
     def make_Toeplitz_Seed_Reversed(input_bits_list, m):
         n1 = len(input_bits_list)
         extended_bits = input_bits_list.copy()
@@ -46,9 +49,12 @@ def RA_Toeplitz():
     R_toeplitz_obj = cryptomite.Toeplitz(n1_R, m_R)
     R_Rand_Toeplitz = R_toeplitz_obj.extract(R_Input_List, R_Seed)
 
+    FINAL_KEY_SIZE = binary_list_to_string(T_Rand_Toeplitz)
+
     with open('Transmitter_Final_Key.txt', 'w') as file:
         file.write(''.join(map(str, T_Rand_Toeplitz)))
 
     with open('Receiver_Final_Key.txt', 'w') as file:
         file.write(''.join(map(str, R_Rand_Toeplitz)))
 
+    print("FINAL   KEY SIZE ----------------------------------- : " + str(len(FINAL_KEY_SIZE)))

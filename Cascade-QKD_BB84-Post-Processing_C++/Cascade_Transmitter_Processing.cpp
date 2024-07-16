@@ -177,6 +177,7 @@ void Cascade_Transmitter_Processing() {
 
 		// Private Randomness Extraction for Enhanced Security
 		if (Err_Val == 0) {
+			cout << "INITIAL KEY SIZE ----------------------------------- : " << sifted_Receiver.size() << endl;
 			Private_RA_Toeplitz();
 			return;
 		}

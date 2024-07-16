@@ -31,7 +31,6 @@ void Cascade_Transmitter() {
         std::cerr << "Unable to open file." << std::endl;
     }
 
-
     ////----------------------> Transmitter Sifting bin file
     //std::ifstream file("transmitter_sift.bin", std::ios::binary);
 
