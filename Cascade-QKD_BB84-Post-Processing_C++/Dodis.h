@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <Python.h>
+#include <Windows.h>
 using namespace std;
 
-void Private_RA_Toeplitz();
+void Dodis();

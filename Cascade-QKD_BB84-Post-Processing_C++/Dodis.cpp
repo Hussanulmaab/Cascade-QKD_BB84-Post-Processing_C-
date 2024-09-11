@@ -3,10 +3,10 @@
 #include <fstream>
 #include <Python.h>
 #include <Windows.h>
-#include "Private_RA_Toeplitz.h"
+#include "Dodis.h"
 using namespace std;
 
-void Private_RA_Toeplitz() {
+void Dodis() {
 
     // Initialize Python configuration
     PyStatus status;
@@ -53,7 +53,7 @@ void Private_RA_Toeplitz() {
     PyObject* pArgs, * pValue;
 
     // Convert the file name to a Python string
-    pName = PyUnicode_DecodeFSDefault("Private_RA_Toeplitz");
+    pName = PyUnicode_DecodeFSDefault("Dodis");
     if (pName == NULL) {
         PyErr_Print();
         throw runtime_error("Failed to convert file name to Python string");
@@ -65,7 +65,7 @@ void Private_RA_Toeplitz() {
 
     if (pModule != NULL) {
         // Get the function from the module
-        pFunc = PyObject_GetAttrString(pModule, "RA_Toeplitz");
+        pFunc = PyObject_GetAttrString(pModule, "Func_Dodis");
         if (pFunc && PyCallable_Check(pFunc)) {
             // Call the function without arguments
             pValue = PyObject_CallObject(pFunc, NULL);
@@ -76,20 +76,20 @@ void Private_RA_Toeplitz() {
                 Py_DECREF(pFunc);
                 Py_DECREF(pModule);
                 PyErr_Print();
-                throw runtime_error("Call to RA_Toeplitz() failed");
+                throw runtime_error("Call to Func_Dodis() failed");
             }
         }
         else {
             if (PyErr_Occurred())
                 PyErr_Print();
-            throw runtime_error("Cannot find function RA_Toeplitz");
+            throw runtime_error("Cannot find function Func_Dodis");
         }
         Py_XDECREF(pFunc);
         Py_DECREF(pModule);
     }
     else {
         PyErr_Print();
-        throw runtime_error("Failed to load Private_RA_Toeplitz");
+        throw runtime_error("Failed to load Dodis");
     }
 
     // Finalize the Python interpreter

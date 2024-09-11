@@ -132,9 +132,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Private_RA_Toeplitz.cpp" />
+    <ClCompile Include="Circulant.cpp" />
+    <ClCompile Include="Dodis.cpp" />
     <ClCompile Include="Permute.cpp" />
-    <ClCompile Include="Public_RA_Toeplitz.cpp" />
+    <ClCompile Include="Toeplitz.cpp" />
     <ClCompile Include="Cascade_Receiver_Processing.cpp" />
     <ClCompile Include="Error_Check.cpp" />
     <ClCompile Include="main.cpp" />
@@ -145,9 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cascade_Transmitter.h" />
-    <ClInclude Include="Private_RA_Toeplitz.h" />
+    <ClInclude Include="Circulant.h" />
+    <ClInclude Include="Dodis.h" />
     <ClInclude Include="Permute.h" />
-    <ClInclude Include="Public_RA_Toeplitz.h" />
+    <ClInclude Include="Toeplitz.h" />
     <ClInclude Include="Cascade_Transmitter_Processing.h" />
     <ClInclude Include="Cascade_Receiver.h" />
     <ClInclude Include="Cascade_Receiver_Processing.h" />

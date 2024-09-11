@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Cascade_Transmitter">
       <UniqueIdentifier>{c3fa6dd8-fd36-48b9-bfa7-ecddc669391c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Randomness_Extractors">
+      <UniqueIdentifier>{5b59f834-3645-4583-b7f9-e8ecdd293b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Randomness_Extractors">
+      <UniqueIdentifier>{3a5de8fd-65d1-4e98-a25e-cc6bdca2d19e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,11 +57,14 @@
     <ClCompile Include="Permute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Public_RA_Toeplitz.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Toeplitz.cpp">
+      <Filter>Source Files\Randomness_Extractors</Filter>
     </ClCompile>
-    <ClCompile Include="Private_RA_Toeplitz.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Dodis.cpp">
+      <Filter>Source Files\Randomness_Extractors</Filter>
+    </ClCompile>
+    <ClCompile Include="Circulant.cpp">
+      <Filter>Source Files\Randomness_Extractors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,11 +86,14 @@
     <ClInclude Include="Permute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public_RA_Toeplitz.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Toeplitz.h">
+      <Filter>Header Files\Randomness_Extractors</Filter>
     </ClInclude>
-    <ClInclude Include="Private_RA_Toeplitz.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Dodis.h">
+      <Filter>Header Files\Randomness_Extractors</Filter>
+    </ClInclude>
+    <ClInclude Include="Circulant.h">
+      <Filter>Header Files\Randomness_Extractors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
