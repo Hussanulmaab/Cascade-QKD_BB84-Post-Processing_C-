@@ -45,13 +45,33 @@ void Cascade_Transmitter_Processing() {
 	Err_Val = Error_Check(sifted_Transmitter, corrected_Receiver);
 	cout << "Err val " << Err_Val << endl;
 
-
 	int i,j,prevJ,k,l,m,n,parity = 0;
+
+	//double small_err_Val = (Err_Val / 100.0);
+	//double temp_i = 0.92 / small_err_Val;
+	//temp_i = floor(temp_i);
+	//cout << "Initial block size " << temp_i << endl;
+
+	//int tempo;
+
 	for (i = 8; i <= sifted_Transmitter.size(); i *= 2 /*i*/) {
+
+		//tempo = i;
+
+		//if (i == 8) {
+		//	i = 125;
+		//}
+		//if (i == 16) {
+		//	i = 400;
+		//}
+		//if (i == 32) {
+		//	i = 400;
+		//}
+		//else i = 400;
 
 		//temp check counter
 		counter += 1;
-		if (counter == 20) break;
+		if (counter == 50) break;
 
 		cout << " -----------Round--------------- " << counter << endl;
 

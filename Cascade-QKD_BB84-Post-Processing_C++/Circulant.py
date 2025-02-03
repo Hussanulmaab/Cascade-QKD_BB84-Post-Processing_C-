@@ -52,7 +52,7 @@ def Func_Circulant():
     log2_error = log2(epsilon)
     T_Seed = [randint(0, 1) for _ in range(n2_T)]
     T_Input_List = [int(char) for char in Corrected_Transmitter_Bits[:n1_T]]
-    markov_q_proof = True
+        markov_q_proof = True
     Verbose = False
     circulant = cryptomite.Circulant.from_params(k1_T,
                                          k2_T,
